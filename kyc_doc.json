@@ -1,0 +1,15 @@
+customers: [
+   customer: {
+        name: "john doe",
+        street_address: "123 a street, San Francisco, CA 93333,US",
+        ssn: "123-45-6789",
+        date_of_birth: "01-01-1966"
+   },
+   customer: {
+        name: "mary jan",
+        street_address: "",
+        ssn: "",
+        date_of_birth: "01-01-2001"
+   }
+]
+  
