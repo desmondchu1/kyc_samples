@@ -3,6 +3,9 @@ customers: [
         name: "john doe",
         street_address: "123 a street, San Francisco, CA 93333,US",
         ssn: "123-45-6789",
+        passport_id: "999999999",
+        passport_country: "US",
+        passport_expiration_date: "2027-01-01",
         date_of_birth: "01-01-1966",
         latest_transaction_amount: 100.00
    },
@@ -10,8 +13,10 @@ customers: [
         name: "mary jan",
         street_address: "",
         ssn: "",
+        passpord_id: "",
+        passport_country: "",
+        passport_expiration_date: "",
         date_of_birth: "01-01-2001",
         latest_transaction_amount: 10000000.00
    }
 ]
-  
