@@ -38,11 +38,16 @@ public class Customer_Profile{
         return email;
     }
 
+    public String getPasswordId() {
+        return passworkd_id;
+    }
+
     @Override
     public String toString() {
         return "Customer{" +
                 "name='" + name + '\'' +
                 ", ssn=" + ssn+
+                ", passpord_id=" + passport_id +
                 ", email='" + email + '\'' +
                 '}';
     }
