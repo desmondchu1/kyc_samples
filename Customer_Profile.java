@@ -38,8 +38,8 @@ public class Customer_Profile{
         return email;
     }
 
-    public String getPasswordId() {
-        return passworkd_id;
+    public String getPassportId() {
+        return passport_id;
     }
 
     @Override
