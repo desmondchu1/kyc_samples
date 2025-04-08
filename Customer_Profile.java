@@ -53,8 +53,8 @@ public class Customer_Profile{
     }
 
     public static void main(String[] args) {
-        Customer customer1 = new Customer("Alice Smith", 101, "alice.smith@example.com","","San FRancisco","111 A street", "CA","US","939393","");
-        Customer customer2 = new Customer("Bob Johnson", 102, "bob.johnson@example.com","","San Diego", "", "","US","339393","");
+        Customer_Profile customer1 = new Customer_Profile("Alice Smith", 101, "alice.smith@example.com","","San FRancisco","111 A street", "CA","US","939393","");
+        Customer_Profile customer2 = new Customer_Profile("Bob Johnson", 102, "bob.johnson@example.com","","San Diego", "", "","US","339393","");
 
         System.out.println(customer1);
         System.out.println(customer2);
