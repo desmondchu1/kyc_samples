@@ -42,6 +42,50 @@ public class Customer_Profile{
         return passport_id;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSSN(String ssn) {
+        this.ssn = ssn;
+    }
+   
+    public void setPassportId(String passportId) {
+        this.passport_id = passport_id;
+    } 
+    
+    public String getDateOfBirth() {
+        return this.date_of_birth;
+    }    
+
+    public void setDateOfBirth(String dateOfBirth) {
+        this.date_of_birth = dateOfBirth;
+    }
+
+
+    private static final String DB_URL = "jdbc:sqlite:mydatabase.db";
+
+    public static Connection getConnection() throws SQLException {
+        return DriverManager.getConnection(DB_URL);
+    }
+
+    public static void saveProfile(Customer_Profile cp) {
+        String sql = "INSERT INTO customer_profile(name, ssn, email, date_of_birth) VALUES (?, ?, ?, ?)";
+
+        try (Connection conn = getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setString(1, cp.getName());
+            pstmt.setInt(2, cp.getSSN());
+            pstmt.setString(3, cp.getEmail());
+            pstmt.setString(4, cp.getDateOfBirth());
+            pstmt.executeUpdate();
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
     @Override
     public String toString() {
         return "Customer{" +
@@ -58,6 +102,8 @@ public class Customer_Profile{
 
         System.out.println(customer1);
         System.out.println(customer2);
+        saveProfile(customer1);
+        saveProfile(customer2);
     }
 }
 
