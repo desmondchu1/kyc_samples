@@ -9,6 +9,7 @@ public class CustomerAccount{
     public String country;
     public String zip;
     public String email;
+    public String desc;
 
      public CustomerAccount(String customer_name, String accountId, String email, String city, String street_address, String state, String country, String zip) {
         this.name = name;
